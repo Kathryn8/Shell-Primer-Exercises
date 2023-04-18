@@ -6,8 +6,8 @@ Exercises to prepare and practice concepts before we begin the simple shell proj
 ## Table of Contents:
 
 ### PID & PPID
-    #### 0. getppid
-    #### 1. /proc/sys/kernel/pid_max
+    * #### 0. getppid
+    * #### 1. /proc/sys/kernel/pid_max
 
 ### Arguments
     #### 0. av
