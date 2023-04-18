@@ -6,6 +6,31 @@ Exercises to prepare and practice concepts before we begin the simple shell proj
 ## Table of Contents:
 
 ### PID & PPID
+    #### 0. getppid
+    #### 1. /proc/sys/kernel/pid_max
+
+### Arguments
+    #### 0. av
+    #### 1. Read line
+    #### 2. command line to av
+
+### Exercise: fork + wait + execve
+
+### Exercise: super simple shell
+
+### File information
+    #### Exercise: find a file in the PATH
+
+### Environment
+    #### 0. printenv with environ
+    #### 1. env vs environ
+    #### 2. getenv()
+    #### 3. PATH
+    #### 4. PATH
+    #### 5. setenv
+    #### 6. unsetenv
+
+### PID & PPID
 
 #### 0. getppid
 Write a program that prints the PID of the parent process. Run your program several times within the same shell. It should be the same. Does `echo $$` print the same value? Why?
@@ -119,4 +144,3 @@ Write a function that deletes the variable name from the environment (without us
 
 Prototype: `int _unsetenv(const char *name);`
 man 3 `unsetenv`
-
