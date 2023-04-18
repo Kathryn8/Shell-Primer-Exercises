@@ -10,20 +10,24 @@
  */
 int main()
 {
-	size_t bytes = 0;
-	char *buffer = NULL;
+	size_t bytes;
+	char *buffer;
+	ssize_t got_line;
 
+	bytes = 0;
+	buffer = NULL;
+	got_line = 0;
 	while (1)
 	{
 		printf("$ ");
-		getline(&buffer, &bytes, stdin);
+		got_line = getline(&buffer, &bytes, stdin);
 		if (buffer == NULL)
 		{
 			printf("Error: getline failed\n");
 			return (-1);
 		}
 		printf("%s", buffer);
-		if (strcmp(buffer, "EOF\n") == 0)
+		if (got_line == -1)
 		{
 			printf("exit\n");
 			free(buffer);
