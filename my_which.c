@@ -42,7 +42,6 @@ int main (int argc, char *argv[], char *envp[])
 			paths = _strdup(string + 1);
 			//printf("%s\n", paths);
 			split_string_into_words(paths, each_path);
-			
 		}
 		i = i + 1;
 	}
@@ -52,7 +51,7 @@ int main (int argc, char *argv[], char *envp[])
 	{
 		//printf ("PATH [%d]: %s\n", i , each_path[i]);
 		/* open a directory stream: dp, read stream and get pointers to directory entry structs: ep */
-		dp = opendir (each_path[i]);
+		dp = opendir(each_path[i]);
 		if (dp == NULL)
 		{
 			perror ("Couldn't open the directory");
