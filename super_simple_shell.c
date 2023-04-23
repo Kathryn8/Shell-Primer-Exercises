@@ -18,6 +18,7 @@ int main(void)
 
 	while (1)
 	{
+		signal(SIGINT, SIG_IGN);
 		i = 0;
 		bytes = 0;
 		buffer = NULL;
